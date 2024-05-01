@@ -24,6 +24,7 @@ function retornaTabuada(requisicao, resposta) {
     //extrair da url da o numero e a quantidade da sequência
     let tabuada = requisicao.query.tabuada;
     let sequencia = requisicao.query.sequencia;
+    let cont;
     if (!sequencia) {
         sequencia = 1;
     }
@@ -34,13 +35,19 @@ function retornaTabuada(requisicao, resposta) {
     resposta.write('<title>Tabuada</title>');
     resposta.write('</head>');
     resposta.write('<body>');
-    resposta.write('<h1>Tabuada do número ' + tabuada + '</h1>');
-    if (tabuada && sequencia) {
-        sequencia = parseInt(sequencia);
-        tabuada = parseInt(tabuada)
-        for (let i = 0; i < sequencia; i++) {
+    resposta.write('<h1 style=" text-align: center; color: blue; text-decoration: underline; font-size: 25pt;">Tabuada do número ' + tabuada + '</h1>');
+
+
+    if (tabuada) {
+        tabuada = parseInt(tabuada);
+        sequencia = parseInt(sequencia)
+        if (sequencia < 0) {
+            cont = 10;
+        }
+        cont = parseInt(sequencia);
+        for (let i = 0; i < cont + 1; i++) {
             const resultado = tabuada * i;
-            resposta.write('<p>' + tabuada + ' x ' + i + ' = ' + resultado + '</p>');
+            resposta.write('<p style="text-align: center; font-size:20px">' + tabuada + ' x ' + i + ' = ' + resultado + '</p>');
         }
     }
     else {
