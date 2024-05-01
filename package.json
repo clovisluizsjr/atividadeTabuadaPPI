@@ -1,0 +1,27 @@
+{
+  "name": "atividadetabuadappi",
+  "version": "1.0.0",
+  "description": "aplicação tabuada online",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clovisluizsjr/atividadeTabuadaPPI.git"
+  },
+  "keywords": [
+    "node",
+    "tabuada",
+    "http",
+    "ppi"
+  ],
+  "author": "Clovis Luiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clovisluizsjr/atividadeTabuadaPPI/issues"
+  },
+  "homepage": "https://github.com/clovisluizsjr/atividadeTabuadaPPI#readme"
+}
